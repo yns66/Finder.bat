@@ -62,7 +62,7 @@ set /p d="Select Disk to Search (C, D, etc.): "
 set /p a="Enter the term you want to search for: "
 
 echo Starting search...
-dir /s %d%:\ | findstr /s /i "%a%"
+dir /s /b %d%:\ | findstr /s /i "%a%"
 
 if %errorlevel% neq 0 (
     echo No files found containing "%a%".
