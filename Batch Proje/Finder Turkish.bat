@@ -64,7 +64,7 @@ set /p d="Arama İçin Disk Seçin (C, D vb.): "
 set /p a="Aramak İstediğinizi Girin: "
 
 echo Arama baslatiliyor...
-dir /s %d%:\ | findstr /s /i "%a%" 
+dir /s /b %d%:\ | findstr /s /i "%a%" 
 
 if %errorlevel% neq 0 (
     echo "%a%" kelimesi bulunamadi.
